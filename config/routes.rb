@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  get 'memos', to: 'memos#index'
+  root to: "memos#index"
+  resources :memos, only:  :new
 end
