@@ -1,13 +1,20 @@
 class MemosController < ApplicationController
 
   def index  # indexアクション
-    @post = "これはコントローラーで定義したインスタンス変数を確認するための文字列です"
+    @memos = Memo.all
   end
 
-  def new　# newアクション
+  def new # newアクション
   end
 
   def create #createアクション
+    Memo.create(memo_params)
+    redirect_to root_path
   end
+
+   private
+    def memo_params
+    params.permit(:content)
+    end
   
 end
