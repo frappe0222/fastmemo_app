@@ -1,15 +1,19 @@
 class MemosController < ApplicationController
 
   def index  # indexアクション
-    @memos = Memo.all
+    @memos = Memo.all.order("created_at DESC")
   end
 
   def new # newアクション
+    require "date"
+    @daytime = Date.today
+    @time = @daytime.to_time
   end
 
   def create #createアクション
     Memo.create(memo_params)
     redirect_to root_path
+
   end
 
    private

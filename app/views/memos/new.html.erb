@@ -6,6 +6,7 @@
   <body>
   <h1>投稿ページ</h1>
     <%= form_tag('/memos', method: :post) do %> 
+    <%= @time%>
       <input type="submit" value="投稿する">
       <textarea rows="10" cols="60" name="content"></textarea>
     <% end %>
