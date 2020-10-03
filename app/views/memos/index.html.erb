@@ -6,6 +6,8 @@
      <li>
        <%= memo.content %>
        <%= memo.created_at %>
+       <%= link_to "編集", edit_memo_path(memo) %>
+       <%= link_to "削除", memo_path(memo.id), method: :delete %>
      </li>
  </ul>
 <% end %>
