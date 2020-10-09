@@ -5,20 +5,14 @@
 
 .notification {
   .notice {
-    background-color: blue;
-    color: white;
-    text-align: center;
+    @include flash(blue);
   }
  
   .alert {
-    background-color: orange;
-    color: white;
-    text-align: center;
+    @include flash(orange);
   }
-
- .delete {
-  background-color: red;
-  color: white;
-  text-align: center;
+  
+  .delete {
+    @include flash(red);
+  }
  }
-}

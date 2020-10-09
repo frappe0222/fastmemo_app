@@ -1,13 +1,23 @@
-<%= link_to '新規メモ', '/memos/new' %>
+<div class="header">
+  <%= link_to 'Memo app', root_path %>
+  <%= link_to '新規メモ', '/memos/new' %>
+</div>
 
 <h1>fastMemo app</h1>
+<div class="messages">
  <% @memos.each do |memo| %>
- <ul>
-     <li>
-       <%= memo.content %>
-       <%= memo.created_at %>
-       <%= link_to "編集", edit_memo_path(memo) %>
-       <%= link_to "削除", memo_path(memo.id), method: :delete %>
-     </li>
- </ul>
+    <ul class="content">
+     <li class="message">
+      <%= memo.content %><%= memo.created_at %>
+       <ul>
+        <li class="btn">
+            <%= link_to "編集", edit_memo_path(memo) %>
+        </li>
+          <li class="btn">
+              <%= link_to "削除", memo_path(memo.id), method: :delete %>
+          </li>
+       </ul>
+      </li>
+     </ul> 
 <% end %>
+</div>
