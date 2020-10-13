@@ -1,14 +1,14 @@
 <div class="header">
-  <%= link_to 'Memo app', root_path %>
+  <%= link_to 'Fast Memo app', root_path %>
   <%= link_to '新規メモ', '/memos/new' %>
 </div>
 
-<h1>fastMemo app</h1>
 <div class="messages">
  <% @memos.each do |memo| %>
     <ul class="content">
+     <%= memo.created_at %>
      <li class="message">
-      <%= memo.content %><%= memo.created_at %>
+     <%= memo.content %>
        <ul>
         <li class="btn">
             <%= link_to "編集", edit_memo_path(memo) %>

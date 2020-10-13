@@ -2,15 +2,29 @@
 <html>
 <title>fastmemoApp</title>
   <head>
+    <div class="header">
+      <%= link_to 'Fast Memo app', root_path %>
+      <%= link_to '新規メモ', '/memos/new' %>
+    </div>
   </head>
   <body>
-  <h1>投稿ページ</h1>
-    <%= form_tag('/memos', method: :post) do %> 
-    <%= @time%>
-      <input type="submit" value="投稿する">
-      <textarea rows="10" cols="60" name="content"></textarea>
-    <% end %>
-  <%= link_to 'メモリストへ', '/' %> 
-  
-  </body>
+  <%= form_tag('/memos', method: :post) do %> 
+  <div class="wrapper">
+    <div class="side">
+      <div class="title">
+        <h1>投稿ページ</h1><%= @time%>
+      </div>
+    </div>
+    <div class="main">
+      <div class="content">
+      <div class="send">
+        <input type="submit" value="メモ保存">
+      </div>
+        <textarea rows="20" cols="85" name="content"placeholder="好きなメモを入力" wrap="hard"></textarea>
+      </div>
+    </div>
+  </div>
+  <% end %>
+   
+ </body>
 </html>
