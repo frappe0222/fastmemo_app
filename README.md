@@ -38,6 +38,9 @@ FastMemo APP
 
 * 作成者 平野颯太
 * E-mail frappeccino@gmail.com
+
+# 本番環境 URL
+
 * https://fastmemo-app.herokuapp.com/
 
 
