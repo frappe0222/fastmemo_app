@@ -14,6 +14,10 @@ FastMemo APP
   WEBアプリケーション、登録や起動などのタイムラグがなく無料で活用できる。
   ”メモがすぐできる”
 
+# 本番環境 URL
+
+* https://fastmemo-app.herokuapp.com/
+
 # Features 課題・追加実装予定
 
 * １ページでリスト確認とメモが可能な２カラムデザインに編集。
@@ -38,10 +42,6 @@ FastMemo APP
 
 * 作成者 平野颯太
 * E-mail frappeccino@gmail.com
-
-# 本番環境 URL
-
-* https://fastmemo-app.herokuapp.com/
 
 
 ## DB設計
